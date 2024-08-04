@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 JSON Not Provided/Invalid JSON URL</title>
+    <style id="dynamic-styles">
+        /* Default styles can go here */
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>404 - JSON Configuration Not Found</h1>
+        <p>Please provide a URL parameter with the configuration file.</p>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const configUrl = urlParams.get('config');
+
+            if (!configUrl) {
+                // Display 404 message if no URL parameter is provided
+                document.getElementById('content').style.display = 'block';
+                return;
+            }
+
+            fetch(configUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(config => {
+                    // Clear existing content
+                    document.body.innerHTML = '';
+
+                    // Apply dynamic styles
+                    const styleElement = document.getElementById('dynamic-styles');
+                    let css = '';
+                    if (config.styles) {
+                        for (const [selector, rules] of Object.entries(config.styles)) {
+                            css += `${selector} { `;
+                            for (const [property, value] of Object.entries(rules)) {
+                                css += `${property}: ${value}; `;
+                            }
+                            css += '} ';
+                        }
+                    }
+                    styleElement.textContent = css;
+
+                    // Update page title
+                    document.title = config.title || document.title;
+
+                    // Add new HTML content
+                    if (config.elements) {
+                        config.elements.forEach(el => {
+                            const element = document.createElement(el.type);
+                            element.textContent = el.content;
+                            document.body.appendChild(element);
+                        });
+                    }
+
+                    // Load additional JavaScript from config
+                    if (config.scripts) {
+                        config.scripts.forEach(scriptContent => {
+                            const scriptTag = document.createElement('script');
+                            scriptTag.textContent = scriptContent;
+                            document.body.appendChild(scriptTag);
+                        });
+                    }
+                })
+                .catch(error => {
+                    // Handle errors (e.g., network issues, invalid JSON)
+                    document.body.innerHTML = `
+                        <h1>404 - JSON Configuration Not Found</h1>
+                        <p>The configuration file could not be loaded. Please check the URL parameter or try again later.</p>
+                    `;
+                    console.error('Error fetching or processing config file:', error);
+                });
+        });
+    </script>
+</body>
+</html>
