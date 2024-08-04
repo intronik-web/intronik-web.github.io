@@ -9,9 +9,9 @@ Intronik is a user-friendly web hosting service that offers reliable and free we
 
 The price for using Intronik's web hosting service is calculated using the following formula:
 
-$$
-f(x) = (x^2 - x^2) \cdot e^x
-$$
+
+$f(x) = (x^2 - x^2) \cdot e^x$
+
 
 Where:
 - \( x \) is any real number.
