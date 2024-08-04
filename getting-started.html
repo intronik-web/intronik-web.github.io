@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intronik - Getting Started</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        .code {
+            background-color: #1e3a8a; /* Tailwind blue-800 */
+            color: #fbbf24; /* Tailwind yellow-400 */
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.25rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+    <header class="bg-blue-900 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Intronik</h1>
+            <nav>
+                <a href="index.html" class="text-lg hover:text-gray-300">Home</a>
+                <a href="features.html" class="ml-6 text-lg hover:text-gray-300">Features</a>
+                <a href="pricing.html" class="ml-6 text-lg hover:text-gray-300">Pricing</a>
+                <a href="getting-started.html" class="ml-6 text-lg hover:text-gray-300">Getting Started</a>
+                <a href="contact.html" class="ml-6 text-lg hover:text-gray-300">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Getting Started Section -->
+        <section class="py-20">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-12">Getting Started with Intronik</h2>
+                <p class="text-lg mb-8">Ready to set up your website with Intronik? Follow these simple steps:</p>
+                <div class="bg-white shadow-lg rounded-lg p-6 mx-auto max-w-lg">
+                    <h3 class="text-2xl font-semibold mb-4">Step 1: Create Your <span class="code">config.json</span></h3>
+                    <p class="text-lg mb-8">Start by creating your <span class="code">config.json</span> file. This file contains all the configuration details for your website.</p>
+                    <p class="text-lg mb-8">
+                        Need help with creating your <span class="code">config.json</span>? Visit our <a href="https://intronik-web.github.io/config-maker.html" class="text-blue-900 hover:underline">Config Maker</a> tool to easily generate one.
+                    </p>
+                    
+                    <h3 class="text-2xl font-semibold mb-4">Step 2: Upload Your <span class="code">config.json</span></h3>
+                    <p class="text-lg mb-8">Upload your <span class="code">config.json</span> file to the root directory of your hosting setup. If you have multiple pages, make sure each directory has its own <span class="code">config.json</span>.</p>
+                    
+                    <h3 class="text-2xl font-semibold mb-4">Step 3: Access Your Website</h3>
+                    <p class="text-lg mb-8">To render your website, use the following URL format:</p>
+                    <p class="text-lg mb-8">
+                        <span class="code">https://intronik-web.github.io/render?config=https://url.to/your/config.json</span>
+                    </p>
+                    <p class="text-lg mb-8">Replace <span class="code">https://url.to/your/config.json</span> with the actual URL of your configuration file.</p>
+                    
+                    <h3 class="text-2xl font-semibold mb-4">Step 4: Enjoy!</h3>
+                    <p class="text-lg">That's it! Your website should now be live and ready to go. If you encounter any issues, feel free to reach out to our support team.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-900 text-white py-4 text-center">
+        <p>&copy; 2024 Intronik. All rights reserved.</p>
+    </footer>
+</body>
+</html>
