@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intronik - Free Web Hosting Made Simple</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        .code {
+            background-color: #1e3a8a; /* Tailwind blue-800 */
+            color: #fbbf24; /* Tailwind yellow-400 */
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.25rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+    <header class="bg-blue-900 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Intronik</h1>
+            <nav>
+                <a href="#features" class="text-lg hover:text-gray-300">Features</a>
+                <a href="#pricing" class="ml-6 text-lg hover:text-gray-300">Pricing</a>
+                <a href="#getting-started" class="ml-6 text-lg hover:text-gray-300">Getting Started</a>
+                <a href="#contact" class="ml-6 text-lg hover:text-gray-300">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-blue-800 text-white py-20">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-4">Welcome to Intronik</h2>
+                <p class="text-xl mb-8">Your one-stop solution for web hosting, completely free and with simple configuration using a <span class="code">config.json</span> file.</p>
+                <a href="#features" class="bg-yellow-500 text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-yellow-400">Learn More</a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-12">Features</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <div class="bg-white shadow-lg rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-4">Free Forever</h3>
+                        <p>No hidden fees or premium tiers—enjoy our web hosting service completely free of charge!</p>
+                    </div>
+                    <div class="bg-white shadow-lg rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-4">Easy Configuration</h3>
+                        <p>Configure your hosting with a simple <span class="code">config.json</span> file. No complex setups needed!</p>
+                    </div>
+                    <div class="bg-white shadow-lg rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-4">Reliable Performance</h3>
+                        <p>Enjoy high uptime and fast load speeds for your website with our robust infrastructure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Getting Started Section -->
+        <section id="getting-started" class="bg-gray-100 py-20">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-12">Getting Started</h2>
+                <p class="text-lg mb-8">To set up your website on Intronik, follow these guidelines:</p>
+                <ul class="list-disc list-inside mb-8">
+                    <li>For a single-page website, simply upload your <span class="code">config.json</span> file to the root directory.</li>
+                    <li>If your site has multiple pages, organize them into separate folders. Ensure that each folder contains a <span class="code">config.json</span> file to maintain consistency with the rendering.</li>
+                    <li>All <span class="code">config.json</span> files must be hosted on a separate server URL. Make sure the URLs are correctly referenced in your website setup.</li>
+                    <li>To render your website, use the following URL format: <span class="code">/render?config=https://url.to/your/config.json</span>. Replace <span class="code">https://url.to/your/config.json</span> with the actual URL of your configuration file.</li>
+                </ul>
+                <p class="text-lg">This structure ensures that your website's configuration remains organized and functional across different pages and is easily accessible from your hosting setup.</p>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="bg-gray-100 py-20">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-12">Pricing</h2>
+                <p class="text-lg mb-8">Our web hosting service is completely free. No charges, no subscriptions—just reliable hosting for everyone.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-12">Contact Us</h2>
+                <p class="text-lg mb-8">Have any questions or need support? Reach out to us at <a href="mailto:koshlandjg105@gmail.com" class="text-blue-900 hover:underline">koshlandjg105@gmail.com</a> and we'll be happy to assist you!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-900 text-white py-4 text-center">
+        <p>&copy; 2024 Intronik. All rights reserved.</p>
+    </footer>
+</body>
+</html>
