@@ -1,6 +1,8 @@
 
 # Intronik Documentation
 
+![Screenshot 2024-08-04 10 15 02 AM](https://github.com/user-attachments/assets/f9e15d64-821c-4807-bb26-5da058ec29f4)
+
 ## Overview
 
 Intronik is a user-friendly web hosting service that offers reliable and free web hosting solutions. With a focus on simplicity and ease of use, Intronik allows users to manage their websites using a straightforward `config.json` file.
